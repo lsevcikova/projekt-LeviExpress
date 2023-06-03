@@ -1,17 +1,19 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { JourneyPicker } from '../JourneyPicker'
-import { JourneyDetail } from '../JourneyDetail';
+import { JourneyDetail } from '../JourneyDetail'
 
 export const Home = () => {
-const[journey, setJourney] = useState();
+  const [journey, setJourney] = useState()
   const handleJourneyChange = data => {
-    console.log(data)
     setJourney(data)
   }
+
+  console.log(journey)
+
   return (
     <main>
       <JourneyPicker onJourneyChange={handleJourneyChange} />
-      {/* <JourneyDetail journey={journey}/> */}
+      {journey && <JourneyDetail journey={journey} />}
     </main>
   )
 }
