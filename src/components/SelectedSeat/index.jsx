@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 
-export const SelectedSeat = () => (
+export const SelectedSeat = ({number}) => (
   <>
     <div className='selected-seat container'>
       <h2>Vaše sedadlo</h2>
@@ -17,19 +17,19 @@ export const SelectedSeat = () => (
         />
         <path className='seat__path' d='M 65,10 H 25 C 5,35 5,65 25,90 H 65' />
         <text className='seat__text' x='55' y='65'>
-          26
+          {number}
         </text>
       </svg>
     </div>
 
-    <div class="seat-picker container">
+    <div className="seat-picker container">
       <h2>Vyberte sedadlo</h2>
-      <div class="seats">
+      <div className="seats">
         <div className="seat-row">
-          <svg class="seat" viewBox="0 0 100 100" role="button">
-            <rect class="seat__rect" width="80" height="80" x="14" y="10" rx="15" ry="15" />
-            <path class="seat__path" d="M 65,10 H 25 C 5,35 5,65 25,90 H 65" />
-            <text class="seat__text" x="55" y="65">33</text>
+          <svg className="seat" viewBox="0 0 100 100" role="button">
+            <rect className="seat__rect" width="80" height="80" x="14" y="10" rx="15" ry="15" />
+            <path className="seat__path" d="M 65,10 H 25 C 5,35 5,65 25,90 H 65" />
+            <text className="seat__text" x="55" y="65">33</text>
           </svg>
 
           <svg class="seat" viewBox="0 0 100 100" role="button">
@@ -97,7 +97,7 @@ export const SelectedSeat = () => (
           <svg class="seat seat--selected" viewBox="0 0 100 100" role="button">
             <rect class="seat__rect" width="80" height="80" x="14" y="10" rx="15" ry="15" />
             <path class="seat__path" d="M 65,10 H 25 C 5,35 5,65 25,90 H 65" />
-            <text class="seat__text" x="55" y="65">26</text>
+            <text class="seat__text" x="55" y="65">{number}</text>
           </svg>
 
           <svg class="seat seat--occupied" viewBox="0 0 100 100" role="button">
