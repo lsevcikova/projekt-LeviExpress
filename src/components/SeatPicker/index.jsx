@@ -8,7 +8,7 @@ export const SeatPicker = ({seats, journeyId}) => (
             <h2>Vyberte sedadlo</h2>
             <div className="seats">
                 {seats.map(seat => (
-                <SeatRow/>
+                <SeatRow row={seat}/>
                 ))}
             </div>
         </div>
