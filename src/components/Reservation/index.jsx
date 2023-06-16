@@ -12,7 +12,6 @@ export const Reservation = () => {
     )
       .then(response => response.json())
       .then(data => {
-        console.log(data)
         setReservation(data.results)
       })
   }, [])

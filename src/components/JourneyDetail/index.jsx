@@ -8,7 +8,7 @@ export const JourneyDetail = ({ journey }) => {
       <h2>Podrobnosti cesty</h2>
       <div className='stops'>
         {journey.stops.map(stop => (
-          <BusStop name={stop.name} station={stop.station} time={stop.time} />
+          <BusStop name={stop.name} station={stop.station} time={stop.time} key={stop.name}/>
         ))}
       </div>
     </div>
